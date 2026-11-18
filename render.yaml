@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: war-zone
+    runtime: node
+    plan: free
+    buildCommand: echo "No build step needed"
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: OWNER_KEY
+        generateValue: true
+      - key: NODE_VERSION
+        value: "22"
+    # To keep accounts, skins, bans and ranked scores across restarts, use a paid instance type,
+    # then uncomment the disk below and add an env var DATA_DIR=/var/data
+    # disk:
+    #   name: war-zone-data
+    #   mountPath: /var/data
+    #   sizeGB: 1

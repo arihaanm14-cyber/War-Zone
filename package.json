@@ -1,0 +1,14 @@
+{
+  "name": "war-zone",
+  "version": "1.0.0",
+  "description": "War Zone: a browser arena shooter with online lobby, accounts and ranked",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
